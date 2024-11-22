@@ -16,7 +16,7 @@
       console.log(product);
       console.log(product.name);
       console.log(product.price);
-      */
+
 
       const product2 = {
         name: "shirt",
@@ -41,6 +41,34 @@
       const jsonString = JSON.stringify(product2);
 
       console.log(JSON.parse(jsonString));
+      */
+
+      console.log("Hello".length);
+      console.log("Hello".toUpperCase());
+      console.log("Hello".toLocaleLowerCase());
+
+      const object1 = {
+        message: "Hello"
+      };
+
+      const object2 = object1;
+
+      object1.message = "ataya ani oi";
+      console.log(object2);
+
+      const object3 = {
+        message: "Hello"
+      };
+      console.log(object3.message === object1.message);
+
+      const object4 = {
+        message: "Hello Lord",
+        price: 2
+      };
+
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
     </script>
   </body>
 </html>
