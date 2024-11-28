@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 9 Exercises</title>
+  </head>
+  <body>
+    <button class="btn-9a">9a</button>
+    <button class="btn-9b">9b</button><br /><br />
+
+    <button onclick="Heads();">Heads</button>
+    <button onclick="Tails();">Tails</button>
+    <p class="display"></p>
+    <br /><br />
+
+    <input type="text" class="inputText" onkeydown="PressEnter()" />
+    <button onclick="getName();">submit</button>
+    <p class="displayName"></p>
+
+    <script>
+      console.log(document.querySelector(".btn-9a"));
+      document.querySelector(".btn-9b").innerHTML = "9b done!";
+
+      function PressEnter() {
+        if (event.key === "Enter") {
+          getName();
+        }
+      }
+
+      function getName() {
+        const inputName = document.querySelector(".inputText");
+
+        let name = String(inputName.value);
+
+        if ((name = name)) {
+          const displayName = (document.querySelector(
+            ".displayName"
+          ).innerHTML = `YOUR NAME IS ${name}`);
+        }
+      }
+
+      function Heads() {
+        const display = (document.querySelector(".display").innerHTML =
+          "I choose Heads");
+      }
+
+      function Tails() {
+        const display = (document.querySelector(".display").innerHTML =
+          "I choose Tails");
+      }
+    </script>
+  </body>
+</html>
